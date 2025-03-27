@@ -1,0 +1,169 @@
+
+  /* Header */
+  .header {
+    background-color: #ffffff; /* White background */
+    color: #000000; /* Black text */
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+  }
+  
+  /* Title in Header */
+  .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #1D4ED8; /* Blue color for the title */
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Underline effect under the header title */
+  .title::after {
+    content: '';
+    display: block;
+    width: 100px; /* Underline width */
+    height: 2px;
+    background-color: blue; /* Underline color */
+    margin-top: 10px; /* Space above the underline */
+    margin-left: auto;
+    margin-right: auto; /* Center the underline */
+    transition: width 0.3s ease; /* Animate the underline */
+  }
+  
+  .title:hover::after {
+    width: 100%; /* Expand underline on hover */
+  }
+  
+  /* Content Section */
+  .content {
+    padding: 20px;
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    animation: fadeIn 1s ease-out; /* Add fade-in animation to content */
+  }
+  
+  /* Card Container */
+  .cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  
+  /* Card Styling */
+  .card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 25px;
+    width: 500px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards; /* Animation for cards */
+  }
+  
+  .card:nth-child(1) {
+    animation-delay: 0.3s; /* Stagger animations */
+  }
+  
+  .card:nth-child(2) {
+    animation-delay: 0.6s;
+  }
+  
+  .card:nth-child(3) {
+    animation-delay: 0.9s;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px); /* Lift the card slightly */
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Card Title */
+  .cardTitle {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #1D4ED8; /* Primary color */
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+  }
+  
+  .cardTitle:hover {
+    color: #4c8cff; /* Change color on hover */
+  }
+  
+  /* Card Text */
+  .cardText {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+  }
+  
+  .cardText:hover {
+    color: #555; /* Slightly darken text on hover */
+  }
+  
+  /* Card Icon */
+  .cardIcon {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    animation: slideIn 0.5s ease-out; /* Slide-in animation for icons */
+  }
+  
+  /* Responsive Design for Mobile */
+  @media screen and (max-width: 768px) {
+    .title {
+      font-size: 2rem;
+    }
+  
+    .card {
+      width: 100%; /* Cards will take full width on mobile */
+    }
+  }
+  
+  /* Keyframe Animations */
+  
+  /* Fade-in animation for content */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Fade-in-up animation for cards */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px); /* Start below */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* Move to normal position */
+    }
+  }
+  
+  /* Slide-in animation for icons */
+  @keyframes slideIn {
+    0% {
+      transform: translateY(20px); /* Start from below */
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0); /* Slide to normal position */
+      opacity: 1;
+    }
+  }
+  

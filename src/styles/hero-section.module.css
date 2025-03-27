@@ -1,0 +1,170 @@
+/* 🌟 Hero Container */
+.heroContainer {
+  position: relative;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 20px;
+  margin-top: 1px;
+}
+
+/* 🎥 Video Background */
+.videoWrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.videoBackground {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+/* 🔥 Dark Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+/* ✨ Hero Content */
+.heroContent {
+  position: relative;
+  z-index: 1;
+  color: white;
+  padding: 20px;
+  max-width: 70%;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* 📜 Rotating Announcement */
+.announcement {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffcc00;
+  text-transform: uppercase;
+  white-space: nowrap;
+margin-right: 570px;
+  position: relative;
+  height: 6rem;
+ 
+}
+
+.announcement span {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  animation: textFade 8s linear infinite;
+}
+
+/* 🔄 Smooth Fade In & Out for Announcement */
+@keyframes textFade {
+  0% { opacity: 0; transform: translateY(20px); }
+  10% { opacity: 1; transform: translateY(0); }
+  40% { opacity: 1; transform: translateY(0); }
+  50% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 0; transform: translateY(-20px); }
+}
+
+/* 📜 Description */
+.description {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto 25px;
+}
+
+/* 📍 Info Wrapper */
+.infoWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  opacity: 0.9;
+}
+
+/* 🎯 Buttons */
+.buttonWrapper {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+/* ✨ Stylish Buttons */
+.primaryButton, .secondaryButton {
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);
+}
+
+.primaryButton {
+  background: linear-gradient(45deg, #ff6600, #ff3300);
+  color: white;
+  border: none;
+}
+
+.primaryButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 102, 0, 0.5);
+}
+
+.secondaryButton {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  transition: all 0.3s ease-in-out;
+}
+
+.secondaryButton:hover {
+  background: white;
+  color: black;
+  transform: scale(1.05);
+}
+
+
+@keyframes bounceArrow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* 🔥 Fade In Effect */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 📱 Responsive Styles */
+@media screen and (max-width: 1024px) {
+  .heroContent h1 { font-size: 3rem; }
+  .description { font-size: 1.2rem; }
+}
+
+@media screen and (max-width: 768px) {
+  .heroContent h1 { font-size: 2.5rem; }
+  .description { font-size: 1.1rem; }
+  .buttonWrapper { flex-direction: column; }
+}
+
+@media screen and (max-width: 480px) {
+  .heroContent h1 { font-size: 2rem; }
+  .description { font-size: 1rem; }
+  .primaryButton, .secondaryButton { font-size: 0.9rem; padding: 12px 20px; }
+  .arrowIcon { font-size: 2rem; }
+}

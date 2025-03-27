@@ -1,0 +1,531 @@
+/* Breadcrumb */
+.breadcrumb {
+  background-color: #f8f9fa;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #333;
+  animation: fadeIn 1s ease-out;
+}
+
+.breadcrumb .container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 10px auto;
+  margin-top: 10px;
+}
+
+.breadcrumb a {
+  color: #1d4ed8;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.breadcrumb span {
+  color: #6b7280;
+}
+
+/* Content */
+.content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 50px;
+  animation: fadeIn 1.5s ease-out;
+}
+
+/* Sidebar Enhancements */
+.sidebar {
+  flex: 1;
+  width: 18%;
+  min-width: 200px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.5s ease-in;
+  position: sticky;
+  top: 80px;
+  height: fit-content;
+  transition: all 0.3s ease-in-out;
+  list-style: none;
+}
+
+/* Sidebar Scroll on Overflow */
+.sidebar:hover {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #2563eb #f0f4ff;
+  max-height: 80vh;
+}
+
+/* Sidebar Heading */
+.sidebar h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #374151;
+  font-weight: bold;
+  border-bottom: 3px solid #007bff;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+/* Sidebar Links */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 0.8rem;
+  list-style: none;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #374151;
+  font-size: 1rem;
+  font-weight: 500;
+  display: block;
+  padding: 12px 15px;
+  position: relative;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  list-style: none;
+}
+
+/* Hover Effect */
+.sidebar ul li a:hover {
+  background: #f0f4ff;
+  color: #1d4ed8;
+  padding-left: 15px;
+}
+
+/* ✅ Vertical Underline for Active Link */
+.sidebar ul li a.active::before,
+.sidebar ul li a:hover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #2563eb;
+  border-radius: 3px;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Active Link Styles */
+.sidebar ul li a.active {
+  color: #1d4ed8;
+  font-weight: bold;
+  background: #e6efff;
+  padding-left: 18px;
+}
+
+/* Content Styling */
+.content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 50px;
+  animation: fadeIn 1.5s ease-out;
+  background-color: #f9fafb; /* Added a background color for contrast */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for content */
+}
+
+/* Paragraph Styling for Content */
+.content p {
+  font-size: 1rem;
+  color: #6b7280;
+  line-height: 1.8; /* Increased line-height for better readability */
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  text-justify: inter-word; /* Makes justified text have a better word spacing */
+  word-wrap: break-word; /* Prevents long words from breaking out of the container */
+  letter-spacing: 0.5px; /* Slight letter spacing for readability */
+}
+
+/* Paragraph Text Highlighting */
+.content p strong {
+  font-weight: 600;
+  color: #374151; /* Slightly darker color for emphasis */
+}
+
+/* Links inside Content Paragraphs */
+.content p a {
+  color: #1d4ed8;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.content p a:hover {
+  color: #2563eb;
+  text-decoration: none;
+  transform: scale(1.05); /* Slight scale effect when hovering */
+}
+
+/* Hover Effect for List Items in Content */
+.content ul li {
+  font-size: 1.1rem;
+  color: #374151;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect for list items */
+}
+
+/* Hover Effect for List Items */
+.content ul li:hover {
+  color: #2563eb;
+  transform: translateX(5px);
+}
+
+/* Image Styling in Content */
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.content img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Button Styles in Content */
+.content .buttonContainer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.content .button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #2563eb;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.content .button:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-3px);
+}
+
+/* Content Section Headings */
+.content h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #374151;
+  font-weight: bold;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #2563eb;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Responsive Design for Content on Smaller Screens */
+@media (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .content h2 {
+    font-size: 1.5rem;
+  }
+
+  .content p {
+    font-size: 0.95rem;
+  }
+  
+  .content ul li {
+    font-size: 1rem;
+  }
+
+  .buttonContainer {
+    margin-top: 2rem;
+  }
+}
+
+/* Mobile-First Adjustments for Content */
+@media (max-width: 768px) {
+  .content {
+    padding: 15px;
+  }
+
+  .content h2 {
+    font-size: 1.3rem;
+  }
+
+  .content p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .content ul {
+    padding-left: 20px; /* Adjusted padding for lists */
+  }
+
+  .content ul li {
+    font-size: 0.95rem;
+  }
+
+  .button {
+    padding: 0.7rem 1.2rem;
+  }
+
+  .image {
+    width: 100%; /* Ensure images take full width on smaller screens */
+    height: auto;
+  }
+}
+
+
+  /* Image Styling */
+  .imageSection {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .image {
+    width: 50%;
+    max-width: 50%;
+    height: auto;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    animation: zoomIn 1s ease-out;
+    transition: transform 0.3s ease;
+  }
+  
+  .image:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Button */
+  .buttonContainer {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #2563eb;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-3px);
+  }
+  
+  .button .icon {
+    margin-right: 8px;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes zoomIn {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* "Back to Top" Button */
+  .back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2563eb;
+    color: #fff;
+    border-radius: 50%;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  .back-to-top:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .back-to-top.show {
+    display: block;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .content {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .sidebar {
+      width: 100%;
+      min-width: unset;
+      position: relative;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      padding: 15px;
+    }
+    .sidebar h3 {
+      font-size: 1.25rem;
+    }
+    .sidebar ul li a {
+      font-size: 0.9rem;
+      padding: 10px;
+    }
+    .content-section h2 {
+      font-size: 1.5rem;
+    }
+    .content-section p {
+      font-size: 0.95rem;
+    }
+  }
+  /* Rules Section Styling */
+.rulesContainer {
+    background-color: #f9fafb;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
+   
+  }
+  
+  /* Rules Heading */
+  .rulesContainer h1 {
+    font-size: 1.75rem;
+    color: #374151;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #2563eb;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Numbered List */
+  .rulesList {
+    list-style-type: decimal;
+    padding-left: 25px;
+    color: #374151;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-top: 40px;
+  }
+  
+  .rulesList li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 5px;
+    animation: fadeInUp 0.8s ease-in-out;
+  }
+  
+  /* Hover Effect */
+  .rulesList li:hover {
+    color: #1d4ed8;
+    transform: translateX(5px);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .rulesContainer {
+      padding: 15px;
+    }
+    .rulesList {
+      font-size: 0.95rem;
+    }
+  }
+  /* Container for the section */
+.question-container {
+  margin-top: 2rem;
+  background-color: #f9fafb; /* Light gray background */
+  padding: 1rem;
+  border-radius: 8px; /* Rounded corners */
+  border: 1px solid #e5e7eb; /* Light border */
+}
+
+/* Title Styling */
+.question-title {
+  font-size: 1.125rem; /* Font size for the title */
+  font-weight: 600; /* Bold weight */
+  color: #2563eb; /* Primary color */
+  margin-bottom: 0.5rem; /* Space below the title */
+}
+
+/* Paragraph Styling */
+.question-text {
+  font-size: 0.875rem; /* Smaller font for the description */
+  color: #4b5563; /* Dark gray text */
+  margin-bottom: 1rem; /* Space below the paragraph */
+}
+
+/* Button Styling */
+.contact-button {
+  width: 100%; /* Full width button */
+  padding: 0.8rem 1.5rem; /* Padding inside the button */
+  background-color: #2563eb; /* Primary color */
+  color: #ffffff; /* White text */
+  font-weight: bold; /* Bold text */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+/* Button Hover Effect */
+.contact-button:hover {
+  background-color: #1d4ed8; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Button Focus Effect */
+.contact-button:focus {
+  outline: none; /* Remove focus outline */
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.4); /* Focus outline with primary color */
+}

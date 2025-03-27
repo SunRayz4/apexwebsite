@@ -1,0 +1,227 @@
+/* Breadcrumb */
+.breadcrumb {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Layout */
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 50px;
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 1;
+    width: 15%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease-in;
+}
+
+/* Sidebar Heading */
+.sidebar h3 {
+    font-size: 1.25rem;
+    text-align: center;
+    color: #374151;
+    font-weight: bold;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 8px;
+}
+
+/* Sidebar Navigation */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Sidebar List Items */
+.sidebar ul li {
+    margin-bottom: 12px;
+    position: relative;
+}
+
+/* Sidebar Links */
+.sidebar ul li a {
+    text-decoration: none;
+    color: #374151;
+    font-size: 1rem;
+    font-weight: 500;
+    display: block;
+    padding: 12px 15px;
+    position: relative;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.sidebar ul li a:hover {
+    background: #f0f4ff;
+    color: #1d4ed8;
+    padding-left: 15px;
+}
+
+/* ✅ Vertical Underline for Active Link */
+.sidebar ul li a.active::before,
+.sidebar ul li a:hover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background-color: #2563eb;
+    border-radius: 3px;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Active Link Styles */
+.sidebar ul li a.active {
+    color: #1d4ed8;
+    font-weight: bold;
+    background: #e6efff;
+    padding-left: 18px;
+}
+
+/* Sub-links (If Any) */
+.sidebar ul li ul {
+    padding-left: 10px;
+}
+
+.sidebar ul li ul li a {
+    font-size: 0.9rem;
+    padding-left: 25px;
+}
+
+/* Responsive Sidebar */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Sidebar Animation */
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+/* Main Content */
+.mainContent {
+    width: 70%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Content Headers with Underline */
+.mainContent h1,
+.mainContent h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* 🔹 Small Horizontal Underline */
+.mainContent h1::after,
+.mainContent h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #007bff;
+    margin: 8px auto 0;
+    border-radius: 5px;
+}
+
+/* 📌 Improved Paragraph Styling */
+.mainContent p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;
+    text-align: justify;
+    margin-bottom: 15px;
+    padding: 0 15px;
+}
+
+/* ✨ Highlight First Paragraph */
+.mainContent p:first-of-type {
+    font-weight: bold;
+    color: #333;
+}
+
+/* 📌 Improved Image Section */
+.imageSection {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.imageSection img {
+    width: 60%;  /* Reduce width */
+    max-width: 500px;  /* Set max width */
+    height: auto;  /* Maintain aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Image Hover Effect */
+.imageSection img:hover {
+    transform: scale(1.05);
+}
+
+/* Button Styling */
+.buttonContainer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+.activeLink {
+    position: relative;
+    font-weight: bold;
+    color: #007bff; /* Primary color for active links */
+  }
+  
+  .activeLink::before {
+    content: "";
+    position: absolute;
+    left: -8px; /* Adjust for spacing */
+    top: 0;
+    height: 100%;
+    width: 4px; /* Thickness of the underline */
+    background-color: #007bff; /* Same as text color */
+    border-radius: 2px;
+  }
+  

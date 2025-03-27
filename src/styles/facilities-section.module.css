@@ -1,0 +1,190 @@
+/* 🌟 General Styling */
+.container, .programmesSection {
+  text-align: center;
+  padding: 6rem 2rem;
+  border-radius: 12px;
+  position: relative;
+}
+
+/* ✨ Heading with Underline */
+.heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+
+/* Underline effect */
+.heading::after {
+ 
+    content: '';
+    display: block;
+    width: 100px; /* Underline width */
+    height: 2px;
+    background-color: blue; /* Underline color */
+    margin-top: 10px; /* Space above the underline */
+    margin-left: auto;
+    margin-right: auto; /* Center the underline */
+  
+}
+
+/* 🏫 Facilities Cards Layout */
+.cardsWrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1500px;
+  margin: auto;
+}
+
+.card {
+  max-width: 260px;
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  border-color: #1c7ed6;
+}
+
+.icon {
+  font-size: 2rem;
+  color: #1c7ed6;
+  margin-bottom: 1rem;
+}
+
+.card h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* ✨ Programmes Section */
+.programmesSection {
+  padding: 6rem 2rem;
+  border-radius: 12px;
+  position: relative;
+  text-align: center;
+  margin-bottom: 50px;
+  background-color: #f9f9f9
+}
+
+/* 🖼️ Programme Carousel */
+.carouselContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 1500px;
+  margin: auto;
+}
+
+.carousel {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1.5rem;
+  overflow: hidden;
+  width: 90%;
+}
+
+.programmeCard {
+  max-width: 700px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background: #f8fafc;
+  border: 3px solid #f1f5f9;
+}
+
+
+.programmeImage {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.programmeCard:hover .programmeImage {
+  transform: scale(1.05);
+}
+
+/* 🔵 Three Dots for Navigation */
+.dotsWrapper {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: gray;
+  border-radius: 50%;
+  transition: background 0.3s ease-in-out;
+}
+
+.dot.active {
+  background: #1c7ed6;
+  width: 12px;
+  height: 12px;
+}
+
+/* 🌟 Responsive Design */
+@media (max-width: 1024px) {
+  .cardsWrapper {
+    gap: 1.5rem;
+  }
+
+  .card {
+    max-width: 220px;
+    padding: 1.5rem;
+  }
+
+  .programmeCard {
+    max-width: 600px;
+  }
+
+  .programmeImage {
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cardsWrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .carousel {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .programmeCard {
+    max-width: 90%;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .heading::after {
+    width: 50px;
+    height: 3px;
+  }
+}

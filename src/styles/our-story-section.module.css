@@ -1,0 +1,319 @@
+/* About Section Styles */
+.about {
+    background-color: #f9f9f9; /* Light background color */
+    padding: 60px 0; /* Adding padding around the section */
+    margin-top: 50px;
+  }
+  
+  .about h2 {
+    font-size: 3rem; /* Large font size for the main heading */
+    font-weight: bold;
+    text-align: center; /* Center-align the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    margin-bottom: 50px;
+  }
+  
+  .about h2 span {
+    color: blue; /* Make the word 'Story' blue */
+  }
+  
+  /* Adding underline to the heading */
+  .about h2::after {
+    content: '';
+    display: block;
+    width: 100px; /* Underline width */
+    height: 2px;
+    background-color: blue; /* Underline color */
+    margin-top: 10px; /* Space above the underline */
+    margin-left: auto;
+    margin-right: auto; /* Center the underline */
+  }
+  
+  .about h3 {
+    font-size: 2rem; /* Subheading font size */
+    font-weight: 600;
+    margin-bottom: 15px; /* Space between the heading and paragraph */
+  }
+  
+  .about p {
+    font-size: 1.1rem; /* Slightly larger font for readability */
+    line-height: 1.6;
+    color: #555; /* Dark grey text for better contrast */
+  }
+  
+  /* Styling for the buttons */
+  .customBtn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #007bff; /* Primary button color */
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .customBtn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: translateY(-2px); /* Button hover effect */
+  }
+  
+  .customBtn:focus {
+    outline: none;
+  }
+  
+  /* Styling for the avatars and avatar group */
+  .avatar-group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .avatar-group .avatar-image {
+    border-radius: 50%; /* Circular avatars */
+    border: 2px solid #fff; /* White border around avatars */
+    transition: transform 0.3s ease;
+  }
+  
+  .avatar-group .avatar-image:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+  }
+  
+  .avatar-group p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-left: 15px;
+    font-weight: 600;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about h2 {
+      font-size: 2.5rem; /* Smaller font for mobile */
+    }
+  
+    .about h3 {
+      font-size: 1.8rem; /* Smaller subheading for mobile */
+    }
+  
+    .about p {
+      font-size: 1rem; /* Slightly smaller paragraph for mobile */
+    }
+  
+    .avatar-group {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .avatar-group .avatar-image {
+      margin-bottom: 10px; /* Space between avatar images */
+    }
+  
+    .customBtn {
+      width: 100%;
+      text-align: center;
+      margin-top: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about h2 {
+      font-size: 2rem; /* Even smaller font for very small screens */
+    }
+  
+    .about h3 {
+      font-size: 1.6rem;
+    }
+  
+    .avatar-group {
+      gap: 10px; /* Reduce gap on smaller screens */
+    }
+  }
+  /* Speakers Section Styles */
+.speakers {
+    background-color: #f1f1f1; /* Light grey background */
+    padding: 60px 0; /* Top and bottom padding */
+  }
+  
+  .speakers h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .speakers h2 u {
+    color: #007bff; /* Blue underline */
+  }
+  
+  /* Speaker Info Card */
+  .speakers-thumb {
+    position: relative;
+    text-align: center;
+    background-color: #fff; /* White background for cards */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Ensure that the image doesn’t overflow the rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for cards */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+  }
+  
+  .speakers-thumb:hover {
+    transform: translateY(-10px); /* Lift the card up when hovered */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+  }
+  
+  .speakers-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures that the image covers the entire area */
+    border-bottom: 2px solid #f1f1f1; /* Slight border separating image from info */
+  }
+  
+  .speakers-featured-text {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 5px 15px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+  }
+  
+  .speakers-info {
+    padding: 20px;
+  }
+  
+  .speakers-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .speakers-text {
+    font-size: 1.1rem;
+    color: #777;
+    margin-bottom: 10px;
+  }
+  
+  .social-icon {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .social-icon-link {
+    font-size: 1.5rem;
+    color: #007bff;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icon-link:hover {
+    color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 768px) {
+    .speakers h2 {
+      font-size: 2.5rem; /* Adjust title size for mobile */
+    }
+  
+    .speakers-thumb {
+      margin-bottom: 20px; /* Add spacing between speaker cards */
+    }
+  
+    .col-lg-6 {
+      margin-bottom: 30px;
+    }
+  
+    .speakers-info {
+      padding: 15px;
+    }
+  
+    .speakers-title {
+      font-size: 1.2rem; /* Smaller font size for mobile */
+    }
+  
+    .speakers-text {
+      font-size: 1rem; /* Smaller font size for mobile */
+    }
+  
+    .social-icon {
+      gap: 8px;
+    }
+  
+    .speakers-featured-text {
+      top: 10px;
+      left: 10px;
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .speakers h2 {
+      font-size: 2rem; /* Adjust title size for very small screens */
+    }
+  
+    .social-icon-link {
+      font-size: 1.3rem; /* Smaller social icons on smaller screens */
+    }
+  
+    .speakers-title {
+      font-size: 1rem;
+    }
+  
+    .speakers-text {
+      font-size: 0.9rem;
+    }
+  
+    .speakers-thumb {
+      margin-bottom: 20px;
+    }
+  
+    .speakers-info {
+      padding: 10px;
+    }
+  
+    .speakers-info p {
+      font-size: 0.9rem;
+    }
+  }
+  /* Ensure the About section text and image align side by side */
+.col-lg-6 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .text-content {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: rounded corners for the image */
+  }
+  
+  @media (max-width: 768px) {
+    .col-lg-6 {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .text-content {
+      margin-right: 0;
+    }
+  
+    .img-fluid {
+      margin-top: 20px;
+    }
+  }

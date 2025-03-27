@@ -1,0 +1,271 @@
+/* General Styling */
+.breadcrumb {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #333;
+    animation: fadeIn 1s ease-out;
+}
+
+.breadcrumb .container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 10px auto;
+    margin-top: 10px;
+}
+.breadcrumb a {
+    color: #1d4ed8; /* Tailwind's primary blue */
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: -10px;
+  }
+  
+  .breadcrumb span {
+    color: #6b7280; /* Tailwind's gray-500 */
+  }
+
+/* Layout */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 50px;
+}
+.sidebar {
+    flex: 1;
+    width: 15%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease-in;
+  }
+  
+  .sidebar h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #374151; /* Tailwind gray-700 */
+    font-weight: bold;
+    border-bottom: 2px solid #007bff;
+    text-align: center;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin-bottom: 0.8rem;
+    position: relative;
+  }
+  
+  /* .sidebar a {
+    text-decoration: none;
+    color: #374151; 
+    font-size: 1rem;
+    display: block;
+    padding-left: 10px;
+    position: relative;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+  } */
+/* Sidebar Links */
+.sidebar ul li a {
+    text-decoration: none;
+    color: #374151;
+    font-size: 1rem;
+    font-weight: 500;
+    display: block;
+    padding: 12px 15px;
+    position: relative;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Hover Effect */
+  .sidebar ul li a:hover {
+    background: #f0f4ff;
+    color: #1d4ed8;
+    padding-left: 15px;
+  }
+/* Hover Effect */
+.sidebar ul li a:hover {
+  background: #f0f4ff;
+  color: #1d4ed8;
+  padding-left: 15px;
+}
+
+.sidebar ul li a.active::before,
+.sidebar ul li a:hover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #2563eb;
+  border-radius: 3px;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Active Link Styles */
+.sidebar ul li a.active {
+  color: #1d4ed8;
+  font-weight: bold;
+  background: #e6efff;
+  padding-left: 18px;
+}
+
+/* Sub-links (If Any) */
+.sidebar ul li ul {
+  padding-left: 10px;
+}
+
+.sidebar ul li ul li a {
+  font-size: 0.9rem;
+  padding-left: 25px;
+}
+
+/* Main Content Styling */
+.mainContent {
+    width: 75%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease-in-out;
+  
+}
+
+/* Headers with Animation */
+.mainContent h1,
+.mainContent h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-in-out forwards;
+    margin-top: 50px;
+}
+
+.mainContent h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #007bff;
+    margin: 8px auto 0;
+    border-radius: 5px;
+}
+
+/* Table Styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+   
+}
+
+.table th,
+.table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #007bff;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table tr:hover {
+    background-color: #f1f1f1;
+    transition: 0.3s ease-in-out;
+}
+
+/* Button Styling */
+.buttonContainer {
+    margin-top: 20px;
+    text-align: center;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 18px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .sidebar,
+    .mainContent {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

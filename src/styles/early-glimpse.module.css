@@ -1,0 +1,329 @@
+
+  .sidebar {
+    flex: 1;
+    width: 15%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease-in;
+}
+
+/* Sidebar Heading */
+.sidebar h3 {
+    font-size: 1.25rem;
+    text-align: center;
+    color: #374151;
+    font-weight: bold;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 8px;
+}
+
+/* Sidebar Navigation */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Sidebar List Items */
+.sidebar ul li {
+    margin-bottom: 12px;
+    position: relative;
+}
+
+/* Sidebar Links */
+.sidebar ul li a {
+    text-decoration: none;
+    color: #374151;
+    font-size: 1rem;
+    font-weight: 500;
+    display: block;
+    padding: 12px 15px;
+    position: relative;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.sidebar ul li a:hover {
+    background: #f0f4ff;
+    color: #1d4ed8;
+    padding-left: 15px;
+}
+
+/* ✅ Vertical Underline for Active Link */
+.sidebar ul li a.active::before,
+.sidebar ul li a:hover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background-color: #2563eb;
+    border-radius: 3px;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Active Link Styles */
+.sidebar ul li a.active {
+    color: #1d4ed8;
+    font-weight: bold;
+    background: #e6efff;
+    padding-left: 18px;
+}
+
+/* Sub-links (If Any) */
+.sidebar ul li ul {
+    padding-left: 10px;
+}
+
+.sidebar ul li ul li a {
+    font-size: 0.9rem;
+    padding-left: 25px;
+}
+ 
+
+  
+  /* Image Section */
+  .imageSection {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+   
+    margin-top: 30px;
+  }
+  
+  .imageSection .imageTitle {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1D4ED8; /* Primary color */
+    margin-bottom: 20px;
+  }
+  
+  .imageSection img {
+    width: 100%;
+    max-width: 600px; /* Make the image responsive */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Center the image */
+    display: block;
+    transition: transform 0.3s ease-in-out; /* Smooth zoom effect */
+  }
+  
+  .imageSection img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
+  /* Header */
+  .header {
+    background-color: white; /* Primary color */
+    color: black;
+    padding: 40px 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 120px;
+  }
+ 
+
+  .header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+  }
+  
+  .header .subtitle {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    opacity: 0.8;
+  }
+  
+  .breadcrumb {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Layout */
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 50px;
+}
+  .breadcrumb .container {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+  }
+  
+  .breadcrumb a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .breadcrumb a:hover {
+    color: #1D4ED8;
+  }
+  
+  .breadcrumb span {
+    margin: 0 10px;
+    color: #888;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .content {
+      flex-direction: column;
+      gap: 30px;
+    }
+  
+    .sidebar {
+      width: 100%; /* Sidebar takes full width on smaller screens */
+      max-width: 100%;
+    }
+  
+    .imageSection img {
+      max-width: 90%; /* Adjust image width on smaller screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header h1 {
+      font-size: 2.5rem; /* Adjust header size on small screens */
+    }
+  
+    .mainContent h2 {
+      font-size: 1.8rem; /* Adjust main content title */
+    }
+  
+    .sidebar h3 {
+      font-size: 1.1rem; /* Adjust sidebar heading */
+    }
+  
+    .sidebar li a {
+      font-size: 0.9rem; /* Adjust font size for links */
+    }
+  }
+  /* Add these styles to your early-glimpse.module.css */
+
+/* Container for Apply Now button */
+.applyButtonContainer {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  /* Apply Now button styling */
+  .applyButton {
+    background-color: #1D4ED8; /* Primary color */
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .applyButton:hover {
+    background-color: #2563eb; /* Slightly darker shade of primary color on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
+  .applyButton:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.4); /* Focus style */
+  }
+  
+ /* Add these styles to your early-glimpse.module.css */
+
+/* Container for the "Back to About Us" button */
+.buttonContainer {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  /* Back to About Us button styling */
+  .button {
+    background-color: #ffffff; /* White background */
+    color: #1D4ED8; /* Primary color */
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center; /* Align the icon and text horizontally */
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 2px solid #1D4ED8; /* Border color matching primary color */
+  }
+  
+  .button:hover {
+    background-color: #1D4ED8; /* Primary color on hover */
+    color: white; /* Text turns white */
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+  
+  .button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.4); /* Focus style */
+  }
+  
+  /* Icon in the Back to About Us button */
+  .icon {
+    margin-right: 8px; /* Space between the icon and text */
+    font-size: 1.5rem; /* Size of the icon */
+  }
+  
+  /* Optional: Add a left arrow icon for the "Back to About Us" button */
+  .icon::before {
+    content: '←'; /* Unicode left arrow character */
+  }
+  .mainContent {
+    width: 80%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Content Headers with Underline */
+.mainContent h1,
+.mainContent h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* 🔹 Small Horizontal Underline */
+.mainContent h1::after,
+.mainContent h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #007bff;
+    margin: 8px auto 0;
+    border-radius: 5px;
+}
+
+/* 📌 Improved Paragraph Styling */
+.mainContent p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;
+    text-align: justify;
+    margin-bottom: 15px;
+    padding: 0 15px;
+}
+
+/* ✨ Highlight First Paragraph */
+.mainContent p:first-of-type {
+    font-weight: bold;
+    color: #333;
+}

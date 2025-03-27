@@ -1,0 +1,264 @@
+/* General Navbar Styling */
+.navbar {
+  width: 100%;
+  background: linear-gradient(135deg, #002147, #004aad);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+/* School Header */
+.schoolHeader {
+  display: flex;
+  align-items: center;
+}
+
+.schoolLogo img {
+  width: 60px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.schoolLogo img:hover {
+  transform: scale(1.1);
+}
+
+/* Mobile Menu Toggle */
+.menuToggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.menuToggle:hover {
+  color: #ffcc00;
+}
+
+/* Nav Container */
+.navContainer {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.navMenu {
+  display: flex;
+  gap: 20px;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Nav Items */
+.navItem {
+  position: relative;
+}
+
+/* Nav Links - Modern Styling */
+.navLink {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 18px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect - Glow & Underline */
+.navLink:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffcc00;
+  box-shadow: 0 4px 8px rgba(255, 204, 0, 0.3);
+  transform: scale(1.05);
+}
+
+/* Active Link - Highlight */
+.navLink.active {
+  background: #ffcc00;
+  color: #002147;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(255, 204, 0, 0.5);
+}
+
+/* Underline Animation */
+.navLink::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #ffcc00;
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.3s ease-in-out;
+}
+
+.navLink:hover::after {
+  width: 80%;
+}
+
+/* Mobile Nav Link Styles */
+@media (max-width: 900px) {
+  .navLink {
+    padding: 14px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navLink:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffcc00;
+    transform: none;
+  }
+
+  .navLink.active {
+    background: #ffcc00;
+    color: #002147;
+  }
+
+  .navLink::after {
+    display: none; /* No underline for mobile */
+  }
+}
+
+
+.navLink:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffcc00;
+}
+
+/* Dropdown Styling */
+.dropdown {
+  position: relative;
+}
+
+/* Remove List Style from Dropdown */
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  width: 220px;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  display: none;
+  flex-direction: column;
+  padding: 0;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease-in-out;
+  list-style: none;  /* 🔹 Removes bullet points */
+}
+
+.dropdown:hover .dropdownMenu,
+.dropdownMenu.show {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdownItem {
+  padding: 12px 18px;
+  font-size: 14px;
+  color: #003366;
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s ease-in-out;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Light border for separation */
+}
+
+.dropdownItem:last-child {
+  border-bottom: none; /* Remove border from last item */
+}
+
+.dropdownItem:hover {
+  background: #004aad;
+  color: white;
+  padding-left: 22px;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 900px) {
+  .menuToggle {
+    display: block;
+  }
+
+  .navContainer {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #002147;
+    flex-direction: column;
+    display: none;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .navContainer.show {
+    display: flex;
+  }
+
+  .navMenu {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navList {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+  }
+
+  .navItem {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navLink {
+    display: block;
+    width: 100%;
+    padding: 14px;
+  }
+
+  .dropdownMenu {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95); /* Slight transparency */
+    box-shadow: none; /* No shadow for mobile */
+    padding: 10px 0;
+    border-radius: 0;
+  }
+
+  .dropdownItem {
+    padding: 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .dropdownItem:hover {
+    padding-left: 12px;
+  }
+}

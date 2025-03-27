@@ -1,0 +1,376 @@
+
+
+  /* Breadcrumb */
+  .breadcrumb {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #333;
+    animation: fadeIn 1s ease-out;
+  }
+  
+  .breadcrumb .container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 10px auto;
+    margin-top: 10px;
+  }
+  
+  .breadcrumb a {
+    color: #1d4ed8; /* Tailwind's primary blue */
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .breadcrumb span {
+    color: #6b7280; /* Tailwind's gray-500 */
+  }
+  
+  /* Content */
+  .content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 50px;
+    animation: fadeIn 1.5s ease-out;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    flex: 1;
+    width: 15%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease-in;
+  }
+  
+  .sidebar h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #374151; /* Tailwind gray-700 */
+    font-weight: bold;
+    border-bottom: 2px solid #007bff;
+    text-align: center;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin-bottom: 0.8rem;
+    position: relative;
+  }
+  
+  /* .sidebar a {
+    text-decoration: none;
+    color: #374151; 
+    font-size: 1rem;
+    display: block;
+    padding-left: 10px;
+    position: relative;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+  } */
+/* Sidebar Links */
+.sidebar ul li a {
+  text-decoration: none;
+  color: #374151;
+  font-size: 1rem;
+  font-weight: 500;
+  display: block;
+  padding: 12px 15px;
+  position: relative;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.sidebar ul li a:hover {
+  background: #f0f4ff;
+  color: #1d4ed8;
+  padding-left: 15px;
+}
+
+/* ✅ Vertical Underline for Active Link */
+.sidebar ul li a.active::before,
+.sidebar ul li a:hover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #2563eb;
+  border-radius: 3px;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Active Link Styles */
+.sidebar ul li a.active {
+  color: #1d4ed8;
+  font-weight: bold;
+  background: #e6efff;
+  padding-left: 18px;
+}
+
+/* Sub-links (If Any) */
+.sidebar ul li ul {
+  padding-left: 10px;
+}
+
+.sidebar ul li ul li a {
+  font-size: 0.9rem;
+  padding-left: 25px;
+}
+  
+  /* Horizontal underline for the heading */
+  .mainContent h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    font-weight: bold;
+  }
+  
+  .mainContent h1::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #2563eb; /* Tailwind's blue-600 */
+    transition: width 0.5s ease;
+  }
+  
+  .mainContent h1:hover::after {
+    width: 80%;
+  }
+  
+  /* Conveyance Info Section */
+  .conveyanceInfo {
+    margin-top: 2rem;
+    animation: fadeIn 1s ease-out;
+  }
+  
+  .conveyanceInfo h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #374151;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #2563eb; /* Adds a horizontal line under the title */
+  }
+  
+  .conveyanceInfo ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 1rem;
+  }
+  
+  .conveyanceInfo p {
+    font-size: 1rem;
+    color: #6b7280; /* Tailwind's gray-500 */
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  /* Image Section with Reduced Height */
+  .imageSection {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .image {
+    width: 50%;
+    max-width: 50%;
+    height: auto;
+    max-height: 350px; /* Set max-height to limit the image's height */
+    object-fit: cover; /* Ensure image is cropped to fit the container */
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    animation: zoomIn 1s ease-out;
+    transition: transform 0.3s ease;
+  }
+  
+  .image:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
+  /* Button Container */
+  .buttonContainer {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #2563eb; /* Tailwind's blue-600 */
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #1d4ed8; /* Tailwind's blue-500 */
+    transform: translateY(-3px); /* Small lift effect */
+  }
+  
+  .button .icon {
+    margin-right: 8px;
+  }
+  
+  /* Hover Effects */
+  .sidebar a:hover {
+    color: #1d4ed8;
+    transition: color 0.3s ease;
+  }
+  
+  .button:hover .icon {
+    transform: translateX(5px);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes zoomIn {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* New Card Hover Effect (for additional content cards) */
+  .card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+
+  /* Card Title Animation */
+  .card h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #374151;
+    margin-bottom: 1rem;
+  }
+  
+  .card p {
+    color: #6b7280;
+    line-height: 1.6;
+  }
+  
+
+  .imageSection {
+    perspective: 1000px;
+  }
+  
+  .image {
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+  
+  .image:hover {
+    transform: rotateY(15deg); /* 3D flip effect */
+  }
+ 
+  
+  /* Animations for Buttons */
+  @keyframes buttonHover {
+    0% {
+      background-color: #2563eb;
+      transform: translateY(0);
+    }
+    50% {
+      background-color: #1d4ed8;
+      transform: translateY(-3px);
+    }
+    100% {
+      background-color: #2563eb;
+      transform: translateY(0);
+    }
+  }
+  
+  .button:hover {
+    animation: buttonHover 0.5s ease-in-out;
+  }
+  
+ 
+  /* Add Animation for Form Sections */
+  .formSection {
+    animation: fadeIn 1.2s ease-out;
+  }
+  
+  .formSection label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .formSection input,
+  .formSection textarea {
+    margin-bottom: 1.2rem;
+  }
+  
+  /* Add a "Back to Top" Button */
+  .back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2563eb;
+    color: #fff;
+    border-radius: 50%;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  .back-to-top:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .back-to-top.show {
+    display: block;
+  }
+  
